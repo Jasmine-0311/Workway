@@ -1,48 +1,34 @@
-# 網頁切版直播班 Vite 範例 - Bootstrap 版本
-
-## Node.js 版本
-  - 專案的 Node.js 版本需為 v18 以上
-  - 查看自己版本指令：`node -v`
+職旅 (Workway) - Tabs 切版練習side project
+本專案是一個以使用者體驗為核心的個人化管理介面練習。
+主要功能在於實作非跳轉式的分頁切換（Tabs），讓使用者能在「個人資料」、「預約紀錄」與「職旅計劃」之間流暢切換。
 
 
-## 指令列表
-- `npm install` - 初次下載該範例專案後，需要使用 npm install 來安裝套件
-- `npm run dev` - 執行開發模式
-  - 若沒有自動開啟瀏覽器，可嘗試手動在瀏覽器上輸入
-    `http://localhost:5173/<專案名稱>/pages/index.html`
-- `npm run build` - 執行編譯模式（不會開啟瀏覽器）
-- `npm ru deploy` - 自動化部署
+---
 
-## 資料夾結構
-  - assets # 靜態資源放置處
-    - images # 圖片放置處
-    - scss # SCSS 的樣式放置處
+🚀 技術棧 (Tech Stack)
 
-  - layout # ejs 模板放置處
-  - pages # 頁面放置處
+-開發環境：vite
 
-- JavaScript 程式碼可寫在 main.js 檔案
+-樣式處理: CSS3 、Bootstrap 5
 
-### 注意事項
-- 已將 pages 資料夾內的 index.html 預設為首頁，建議不要任意修改 index.html 的檔案名稱
-- .gitignore 檔案是用來忽略掉不該上傳到 GitHub 的檔案（例如 node_modules），請不要移除 .gitignore
+-部署平台: [GitHub Pages](https://jasmine-0311.github.io/Workway/)
 
-## 開發模式的監聽
-vite 專案執行開發模式 `npm run dev` 後即會自動監聽，不需要使用 `Live Sass Compiler` 的 `Watch SCSS` 功能
+✨ 專案亮點
+  -使用 Bootstrap建立版面結構,透過自訂 CSS 客製化部分元件樣式，以符合設計需求
+  -元件化 UI 排版（表單、卡片、按鈕）
+  -視覺稿還原能力（間距、對齊、層級）
+  -熟悉 Vite 開發流程
+  
+💭 設計思考
+ 以「清楚填寫資訊」為目標，透過：
+
+  -分區塊卡片降低認知負擔
+  -Tab 切換提升操作效率
+  -明確的表單層級引導使用者填寫
 
 
-## 部署 gh-pages 流程說明
-### Windows 版本
-1. 在 GitHub 建立一個新的 Repository
+🔧 遇到的問題與解決方案
+  - 在實作 radio button 時，發現每個 input 的 id 必須保持唯一，並與 label 的 for 屬性正確對應。
+    解決方案: 透過確保 id 唯一性與正確綁定，提升表單操作的可預期性與可用性。
 
-2. 部署前請務必先將原始碼上傳到 GitHub Repository 也就是初始化 GitHub，因此通常第一步驟會在專案終端機輸入以下指令
-```cmd
-git init # 若已經初始化過就可以不用輸入
-git add .
-git commit -m 'first commit'
-git branch -M main
-git remote add origin [GitHub Repositories Url]
-git push -u origin main // 僅限第一次輸入，往後只需要輸入 git push
-```
 
-3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
